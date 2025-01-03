@@ -87,8 +87,8 @@ function FinanceGraphChart() {
                     <YAxis />
                     <Tooltip />
                     <Legend />
-                    <Line type="monotone" dataKey="income" stroke="#8884d8" activeDot={{ r: 8 }} />
-                    <Line type="monotone" dataKey="spend" stroke="#82ca9d" />
+                    <Line type="monotone" dataKey="income" stroke="#8884d8" activeDot={{ r: 8 }} strokeWidth={5} />
+                    <Line type="monotone" dataKey="spend" stroke="#82ca9d" strokeWidth={5} />
                 </LineChart>
             </ResponsiveContainer>
         </div>

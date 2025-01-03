@@ -30,14 +30,14 @@ const data = [
 ];
 function AttendanceChart() {
     return (
-        <div className='bg-white rounded-md shadow-md p-4 min-w-[400px] h-full flex-1'>
+        <div className='bg-white rounded-md shadow-md flex flex-col p-4 w-full h-[450px]'>
             {/* Title */}
             <div className='flex justify-between items-center'>
                 <h1 className='text-2xl font-semibold'>Attendance</h1>
                 <CiMenuKebab className='rotate-90 text-4xl text-gray-500' />
             </div>
             {/* Chart */}
-            <ResponsiveContainer minWidth="450px" minHeight="400px">
+            <ResponsiveContainer width="100%" height="100%">
                 <BarChart
                     width={500}
                     height={300}
