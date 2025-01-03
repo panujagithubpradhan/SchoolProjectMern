@@ -1,4 +1,5 @@
 import { RadialBarChart, RadialBar, ResponsiveContainer } from 'recharts';
+import { CiMenuKebab } from "react-icons/ci";
 
 const data = [
     {
@@ -9,7 +10,7 @@ const data = [
     {
         name: 'Boys',
         count: 110,
-        fill: '#8884d8',
+        fill: '#eb902f',
     },
     {
         name: 'Girls',
@@ -18,13 +19,13 @@ const data = [
     },
 ];
 
-
 function CountRadialChart() {
     return (
         <div className='bg-white rounded-md shadow-md flex flex-col p-4 min-w-[400px]'>
             {/* Title */}
-            <div>
+            <div className='flex justify-between items-center'>
                 <h1 className="text-2xl font-semibold text-center">Students :</h1>
+                <CiMenuKebab className='rotate-90 text-4xl text-gray-500' />
             </div>
             {/* Chart */}
             <div>
@@ -42,8 +43,19 @@ function CountRadialChart() {
                 </div>
             </div>
             {/* Footer */}
-            <div>
-
+            <div className='flex justify-around items-center py-2'>
+                {/* Boys */}
+                <div className='flex flex-col items-center'>
+                    <div className='h-4 w-4 rounded-full bg-orange-400'></div>
+                    <h1 className='text-2xl text-slate-600 font-semibold'>110</h1>
+                    <p className='text-gray-400'>BOYS (55%)</p>
+                </div>
+                {/* Girls */}
+                <div className='flex flex-col items-center'>
+                    <div className='h-4 w-4 rounded-full bg-blue-400'></div>
+                    <h1 className='text-2xl text-slate-600 font-semibold'>90</h1>
+                    <p className='text-gray-400'>GIRLS (45%)</p>
+                </div>
             </div>
         </div>
     )

@@ -14,7 +14,7 @@ function App() {
         <div className="bg-green-300 w-[60%] sm:w-[84%] md:w-[88%] lg:w-[88%] relative">
           <Navbar />
           <Outlet />
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </div>
     </>
