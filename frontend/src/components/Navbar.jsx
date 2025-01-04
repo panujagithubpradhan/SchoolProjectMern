@@ -1,8 +1,6 @@
-import React from "react";
-
 function Navbar() {
-  return (
-    <div className="navbar bg-slate-100 shadow-sm p-2 rounded-sm">
+    return (
+        <div className="navbar bg-slate-200 bg-transparent shadow-md p-2 rounded-sm">
             <div className="flex-1">
                 <a className="btn btn-ghost text-xl">MY SCHOOL</a>
             </div>
@@ -33,7 +31,6 @@ function Navbar() {
                 </div>
             </div>
         </div>
-  );
+    )
 }
-
-export default Navbar;
+export default Navbar

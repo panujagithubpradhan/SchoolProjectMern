@@ -1,16 +1,14 @@
-import React from "react";
 import { CiHome } from "react-icons/ci";
 import { RiGraduationCapLine } from "react-icons/ri";
 import { IoPeopleOutline } from "react-icons/io5";
 import { LuNotebookPen } from "react-icons/lu";
-
 function Menubar() {
-  return (
-    <div className="min-h-screen">
+    return (
+        <div className="min-h-screen">
             {/* LOGO */}
             <div className="flex items-center justify-evenly h-20">
                 <img src="" alt="Logo" />
-                <h1 className="text-2xl font-semibold">JS HEAVEN</h1>
+                <h1 className="text-md font-semibold lg:text-2xl">JS HEAVEN</h1>
             </div>
             {/* MENU */}
             <div className="flex flex-col w-full text-center">
@@ -40,7 +38,6 @@ function Menubar() {
                 </div>
             </div>
         </div>
-  );
+    )
 }
-
-export default Menubar;
+export default Menubar
