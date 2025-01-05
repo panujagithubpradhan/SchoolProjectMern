@@ -2,6 +2,7 @@ import { CiHome } from "react-icons/ci";
 import { RiGraduationCapLine } from "react-icons/ri";
 import { IoPeopleOutline } from "react-icons/io5";
 import { LuNotebookPen } from "react-icons/lu";
+import {NavLink} from 'react-router-dom'
 
 function Menubar() {
     return (
@@ -14,28 +15,28 @@ function Menubar() {
             {/* MENU */}
             <div className="flex flex-col w-full text-center">
                 <div>
-                    <a href="#" className="btn btn-ghost w-4/5 flex justify-evenly">
+                    <NavLink to="/" className="btn btn-ghost w-4/5 flex justify-evenly">
                         <CiHome className="inline-block text-2xl" />
                         <span className="hidden lg:inline-block text-xl lg:text-sm font-thin">Home</span>
-                    </a>
+                    </NavLink>
                 </div>
                 <div>
-                    <a href="#" className="btn btn-ghost w-4/5 flex justify-evenly">
+                    <NavLink to="/teacher" className="btn btn-ghost w-4/5 flex justify-evenly">
                         <RiGraduationCapLine className="inline-block text-xl" />
                         <span className="hidden lg:inline-block text-xl lg:text-sm font-thin">Teachers</span>
-                    </a>
+                    </NavLink>
                 </div>
                 <div>
-                    <a href="#" className="btn btn-ghost w-4/5 flex justify-evenly">
+                    <NavLink to="/student" className="btn btn-ghost w-4/5 flex justify-evenly">
                         <IoPeopleOutline className="inline-block text-xl" />
                         <span className="hidden lg:inline-block text-xl lg:text-sm font-thin">Students</span>
-                    </a>
+                    </NavLink>
                 </div>
                 <div>
-                    <a href="#" className="btn btn-ghost w-4/5 flex justify-evenly">
+                    <NavLink href="#" className="btn btn-ghost w-4/5 flex justify-evenly">
                         <LuNotebookPen className="inline-block text-xl" />
                         <span className="hidden lg:inline-block text-xl lg:text-sm font-thin">Subjects</span>
-                    </a>
+                    </NavLink>
                 </div>
             </div>
         </div>

@@ -5,6 +5,7 @@ import Signup from './pages/Signup';
 import Admin from './pages/Admin';
 import Student from './pages/Student';
 import Teacher from './pages/Teacher';
+import TeachersList from './components/list/TeachersList';
 
 const router = createBrowserRouter([
     {
@@ -23,7 +24,11 @@ const router = createBrowserRouter([
             {
                 path : 'teacher',
                 element : <Teacher/>,
-            }
+            },
+            {
+                path:'/list/teacher',
+                element:<TeachersList/>,
+            },
         ]
     },
     {
@@ -33,7 +38,7 @@ const router = createBrowserRouter([
     {
         path : '/signup',
         element:<Signup/>,
-    }
+    },
 ])
 
 export default router;
