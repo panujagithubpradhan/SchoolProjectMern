@@ -2,11 +2,12 @@ import { CiHome } from "react-icons/ci";
 import { RiGraduationCapLine } from "react-icons/ri";
 import { IoPeopleOutline } from "react-icons/io5";
 import { LuNotebookPen } from "react-icons/lu";
+
 function Menubar() {
     return (
-        <div className="min-h-screen">
+        <div className="min-h-screen sticky top-0 z-50 bg-slate-100 shadow-md">
             {/* LOGO */}
-            <div className="flex items-center justify-evenly h-20">
+            <div className="flex items-center justify-evenly h-20 border-b">
                 <img src="" alt="Logo" />
                 <h1 className="text-md font-semibold lg:text-2xl">JS HEAVEN</h1>
             </div>
@@ -27,7 +28,7 @@ function Menubar() {
                 <div>
                     <a href="#" className="btn btn-ghost w-4/5 flex justify-evenly">
                         <IoPeopleOutline className="inline-block text-xl" />
-                        <span className="hidden lg:inline-block text-xl lg:text-sm  font-thin">Students</span>
+                        <span className="hidden lg:inline-block text-xl lg:text-sm font-thin">Students</span>
                     </a>
                 </div>
                 <div>
@@ -38,6 +39,7 @@ function Menubar() {
                 </div>
             </div>
         </div>
-    )
+    );
 }
-export default Menubar
+
+export default Menubar;

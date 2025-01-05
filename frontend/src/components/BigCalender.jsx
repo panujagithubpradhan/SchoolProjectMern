@@ -12,7 +12,7 @@ function BigCalender(props) {
         events={CalenderEvent}
         startAccessor="start"
         endAccessor="end"
-        style={{ height: 500 }}
+        style={{ height: 1000 }}
       />
   );
 }
