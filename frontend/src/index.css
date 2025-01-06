@@ -10,3 +10,6 @@
 .react-calendar {
     width: 100% !important;
   }
+.active{
+    background-color: cadetblue;
+}

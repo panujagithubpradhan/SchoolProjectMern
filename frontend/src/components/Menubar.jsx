@@ -33,10 +33,10 @@ function Menubar() {
                     </NavLink>
                 </div>
                 <div>
-                    <NavLink href="#" className="btn btn-ghost w-4/5 flex justify-evenly">
+                    <a href="#" className="btn btn-ghost w-4/5 flex justify-evenly">
                         <LuNotebookPen className="inline-block text-xl" />
                         <span className="hidden lg:inline-block text-xl lg:text-sm font-thin">Subjects</span>
-                    </NavLink>
+                    </a>
                 </div>
             </div>
         </div>
