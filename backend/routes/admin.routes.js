@@ -1,4 +1,5 @@
 import { Router } from "express";
+import { adminLogin } from "../auth/admin.auth.js";
 
 
 const adminRouter = Router();
@@ -6,8 +7,25 @@ const adminRouter = Router();
 //api
 //demo
 adminRouter.get("/" , (req , res) => {
-    res.send("admin router is working")
+    res.send("admin router is working");
 })
+
+//login
+adminRouter.post("/login" , adminLogin);
+
+//forgot password(generate OTP)
+
+
+//change password
+
+
+//add student
+
+
+//add teacher
+
+
+
 
 
 
