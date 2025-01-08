@@ -1,5 +1,7 @@
 import Admin from "../models/admin.model.js";
 import { generateToken } from "../utils/jwt.js";
+import { sendOtpMail } from "../utils/nodeMailer.js";
+import { generateOTP } from "../utils/otp.js";
 
 export const adminLogin = async (req , res) => {
     try {
@@ -26,5 +28,38 @@ export const adminLogin = async (req , res) => {
         }
     } catch (error) {
         res.status(500).send({message:"Something went wrong" , error:error.message})
+    }
+}
+
+//Forget Password
+export const forgetPassword = async (req , res) => {
+    try {
+        const {email} = req.body;
+        if(!email) return res.status(400).send({error:"Provide the email address"})
+        const isAdmin = await Admin.findOne({email})
+        if (isAdmin) {
+            //if OTP is already created wait for 30sec before creating next one
+            if (isAdmin.otp) {
+                const timelimit =(30*1000) >= (Date.now() - isAdmin.otpCreatedAt);
+                if (timelimit) {
+                    return res.status(420).send({error:"Too many otp requisted wait for 30sec before next"})
+                }
+            }
+            //generate otp
+            let otp = generateOTP();
+
+            //send the otp in user email
+            await sendOtpMail({to:isAdmin.email , otp})
+
+            //save the otp in database
+            isAdmin.otp = otp;
+            isAdmin.otpCreatedAt = Date.now();
+            await isAdmin.save()
+            res.status(201).send({message:"OTP send to the email address"})
+        }else{
+            res.status(400).send({error:"Admin email not found"})
+        }
+    } catch (error) {
+        res.status(500).send({error:"Something went wrong" , msg:error.message})
     }
 }
