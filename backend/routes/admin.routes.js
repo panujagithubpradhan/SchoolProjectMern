@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { adminLogin, forgetPassword } from "../auth/admin.auth.js";
+import { adminLogin, forgetPassword, verifyOTP } from "../auth/admin.auth.js";
 
 
 const adminRouter = Router();
@@ -16,9 +16,12 @@ adminRouter.post("/login" , adminLogin);
 //forgot password(generate OTP)
 adminRouter.post("/otp/create" , forgetPassword)
 
-//change password(verify OTP)
+//(verify OTP)
+adminRouter.post("/otp/verify" , verifyOTP)
 
+//change password
 
+adminRouter.post("/changepass")
 //add student
 
 
